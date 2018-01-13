@@ -21,13 +21,6 @@ The Cuba library offers a choice of four independent routines for multidimension
 |         |                                           |                 |
 | Cuhre   | Cubature rules                            | deterministic   | globally adaptive subdivision
 
-All four have a C/C++, Fortran, and Mathematica interface and can integrate vector integrands. 
-Their invocation is very similar, so it is easy to substitute one method by another for cross-checking. 
-For further safeguarding, the output is supplemented by a chi-square probability which quantifies the reliability of the error estimate.
-The source code compiles with gcc, the GNU C compiler. 
-The C functions can be called from Fortran directly, so there is no need for adapter code. 
-Similarly, linking Fortran code with the library is straightforward and requires no extra tools.
-
 **Vegas** is the simplest of the four.It uses importance sampling for variance reduction, 
 but is only in some cases competitive in terms of the number of samples needed to reach a prescribed accuracy. 
 Nevertheless, it has a few improvements over the original algorithm and comes in handy for cross-checking the results of other methods.
